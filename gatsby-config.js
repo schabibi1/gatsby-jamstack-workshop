@@ -14,9 +14,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-storyblok',
       options: {
-        accessToken: 'XAtHQONyH3ciaShLrirLKAtt',
+        accessToken: 'veIokGF9Q4Cvg9FEpQQx7Qtt',
         homeSlug: 'home',
-        version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
+        version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
+        localAssets: true,
       }
     },
     {
