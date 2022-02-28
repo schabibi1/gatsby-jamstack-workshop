@@ -24,6 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
             edges {
               node {
                 id
+                uuid
                 name
                 slug
                 field_component

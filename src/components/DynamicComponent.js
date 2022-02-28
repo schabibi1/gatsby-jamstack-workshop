@@ -20,13 +20,13 @@ const Components = {
   'posts-list': PostsList
 }
 
-const DynamicComponent = ({blok}) => {
+const DynamicComponent = ({ blok }) => {
   if (typeof Components[blok.component] !== 'undefined') {
     const Component = Components[blok.component]
-    return <Component blok={blok} key={blok._uid}/>
+    return <Component blok={blok} key={blok._uid} />
   }
- 
-  return  blok.component ? <Placeholder componentName={blok.component}/> : null
+
+  return blok.component ? <Placeholder componentName={blok.component} /> : null
 }
 
 export default DynamicComponent

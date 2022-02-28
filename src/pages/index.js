@@ -2,17 +2,21 @@ import React from "react"
 import Page from '../components/Page'
 import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
-import useStoryblok from '../utils/storyblok'
+import { useStoryblok } from "../utils/storyblok";
 
-export default function PageIndex({ data, location }) {
-    const story = useStoryblok(data.story, location)
+const PageIndex = ({ data, location }) => {
+  let story = data.story
+  console.log("PAGE INDEX")
 
-    return (
-      <Layout location={location}>
-        <Page blok={story.content} />
-      </Layout>
-    )
+  story = useStoryblok(story)
+
+  return (
+    <Layout location={location}>
+      <Page blok={story.content} />
+    </Layout>
+  )
 }
+export default PageIndex
 
 export const query = graphql`
   {
@@ -21,6 +25,7 @@ export const query = graphql`
       content
       full_slug
       uuid
+      id
     }
   }
 `
