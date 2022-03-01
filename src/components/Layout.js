@@ -4,7 +4,6 @@ import Footer from './Footer'
 import { useStaticQuery, graphql } from "gatsby"
 
 export default function Layout({ children, location, lang }) {
-  console.log("LAYOUUUUUT")
   const { settings } = useStaticQuery(graphql`
   query Settings {
     settings: allStoryblokEntry(filter: {field_component: {eq: "settings"}}) {

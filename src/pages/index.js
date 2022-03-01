@@ -6,7 +6,6 @@ import { useStoryblok } from "../utils/storyblok";
 
 const PageIndex = ({ data, location }) => {
   let story = data.story
-  console.log("PAGE INDEX")
 
   story = useStoryblok(story)
 
