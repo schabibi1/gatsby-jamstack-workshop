@@ -1,13 +1,13 @@
 import React from "react"
 import DynamicComponent from "./DynamicComponent"
-import { sbEditable } from "@storyblok/storyblok-editable";
+import { storyblokEditable } from "@storyblok/js";
 
 const Page = ({ blok }) => {
   const content =
     blok.body &&
     blok.body.map(childBlok => <DynamicComponent blok={childBlok} key={childBlok._uid} />)
   return (
-    <div {...sbEditable(blok)}>
+    <div {...storyblokEditable(blok)}>
       {content}
     </div>
   )

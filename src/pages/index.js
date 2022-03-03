@@ -8,6 +8,7 @@ const PageIndex = ({ data, location }) => {
   let story = data.story
 
   story = useStoryblok(story)
+  // story.content = JSON.parse(story.content)
 
   return (
     <Layout location={location}>
